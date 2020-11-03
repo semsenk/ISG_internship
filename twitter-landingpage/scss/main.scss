@@ -1,0 +1,192 @@
+@import "config";
+ 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:  "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.showcase {
+  height: 95vh;
+  display: flex;
+  &-1 {
+    flex: 50%;
+    background: #71c9f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-content {
+      width: 24rem;
+      ul {
+        background: $base-color;
+        list-style-type: none;
+        padding: 1rem 0;
+        li {
+          display: flex;
+          padding: 1rem;
+          i.fas,
+          i.far {
+            flex: 12%;
+            font-size: 1.9rem;
+            color: #fff;
+          }
+          span {
+            flex: 88%;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+  &-2 {
+    flex: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+
+    .user-form {
+      flex: 23%;
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 1rem auto;
+      form {
+        display: flex;
+        justify-content: center;
+        .input-box {
+          flex: 40%;
+          background: $inputbox-color;
+          border-bottom: 2px solid $grey-color;
+          border-radius: 3px;
+          margin-right: 1rem;
+          padding: 0.5rem;
+
+          label {
+            font-size: 0.95rem;
+            color: $grey-color;
+            font-weight: 400;
+          }
+          input {
+            background: transparent;
+            border: 1px solid $inputbox-color;
+            font-size: 1.1rem;
+            width: 100%;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+        button {
+          flex: 20%;
+          margin: 0.7rem 1rem;
+          background: #fff;
+          color: $base-color;
+          font-size: 1rem;
+          font-weight: bold;
+          border: 1px solid $base-color;
+          border-radius: 25px;
+          cursor: pointer;
+          &:hover {
+            background: darken(#fff, 3%);
+          }
+        }
+      }
+      .forget-me {
+        display: flex;
+        span {
+          flex: 40%;
+        }
+        a {
+          flex: 40%;
+          margin-top: 0.5rem;
+          text-decoration: none;
+          font-size: 0.8rem;
+          color: $base-color;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        p {
+          flex: 20%;
+        }
+      }
+    }
+
+    &-content {
+      flex: 77%;
+      width: 25rem;
+      margin: auto;
+
+      i {
+        font-size: 2.4rem;
+        color: $base-color;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        margin-bottom: 3rem;
+      }
+      // h4 {
+      // }
+      .signup {
+        @extend %btn;
+        background: $base-color;
+        color: #fff;
+
+        &:hover {
+          background: darken($base-color, 5%);
+          @include easeOut;
+        }
+      }
+      .login {
+        @extend %btn;
+        background: #fff;
+        color: $base-color;
+        border: 1px solid $base-color;
+        }
+      }
+    }
+  }
+  .btn-ext {
+    display: none;
+  }
+
+
+footer {
+  .features {
+    ul {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      li {
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+        a {
+          text-decoration: none;
+          font-size: 0.8rem;
+          color: grey;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        p {
+          padding-top: 0.3rem;
+          font-size: 0.8rem;
+          color: grey;
+        }
+      }
+    }
+  }
+}
+ 
+ 
